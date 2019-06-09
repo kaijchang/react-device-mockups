@@ -6,7 +6,9 @@ export type Props = {
     orientation: 'portrait' | 'landscape',
     color: 'black' | 'white' | 'gold',
     buttonProps: React.HTMLProps<HTMLDivElement>,
-    screenProps: React.HTMLProps<HTMLDivElement>
+    screenProps: React.HTMLProps<HTMLDivElement>,
+    width?: number,
+    height?: number
 };
 
 export default class iPadAir2 extends React.Component<Props> {

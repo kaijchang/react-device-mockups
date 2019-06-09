@@ -4,7 +4,9 @@ import Device from '../Device';
 
 export type Props = {
     buttonProps: React.HTMLProps<HTMLDivElement>,
-    screenProps: React.HTMLProps<HTMLDivElement>
+    screenProps: React.HTMLProps<HTMLDivElement>,
+    width?: number,
+    height?: number
 };
 
 export default class SurfaceStudio extends React.Component<Props> {
