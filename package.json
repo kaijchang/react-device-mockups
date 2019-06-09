@@ -1,6 +1,6 @@
 {
   "name": "react-device-mockups",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "author": "kajchang",
   "license": "MIT",
@@ -23,10 +23,10 @@
   },
   "dependencies": {},
   "peerDependencies": {
+    "html5-device-mockups": "^3.2.1",
     "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0",
-    "html5-device-mockups": "^3.2.1"
+    "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
     "@svgr/rollup": "^2.4.1",
