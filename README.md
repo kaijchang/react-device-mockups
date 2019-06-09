@@ -13,16 +13,18 @@ npm install --save react-device-mockups
 ## Usage
 
 ```tsx
-import * as React from 'react'
+import React from 'react';
 
-import MyComponent from 'react-device-mockups'
+import Device from 'react-device-mockups';
 
 class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
+    render () {
+        return (
+            <Device device='iPhone7' orientation='portrait' color='black'>
+                Hello World!
+            </Device>
+        );
+    }
 }
 ```
 

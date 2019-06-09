@@ -7,11 +7,9 @@ import Device from 'react-device-mockups';
 export default class App extends Component {
     render () {
         return (
-            <div>
-                <Device device='iPhone7' orientation='portrait' color='black'>
-                    Hello World!
-                </Device>
-            </div>
-        )
+            <Device device='iPhone7' orientation='portrait' color='black'>
+                Hello World!
+            </Device>
+        );
     }
 }
