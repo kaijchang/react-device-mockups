@@ -1,23 +1,26 @@
-/**
- * @class ExampleComponent
- */
+import * as React from 'react';
 
-import * as React from 'react'
+export type Props = {
+    device: string,
+    orientation: 'portrait' | 'landscape',
+    color: 'black' | 'white' | 'gold' | 'red' | 'pink',
+    buttonProps: React.HTMLProps<HTMLDivElement>,
+    screenProps: React.HTMLProps<HTMLDivElement>
+};
 
-import styles from './styles.css'
+export default class Device extends React.Component<Props> {
+    render() {
+        const { device, orientation, color, children, buttonProps, screenProps } = this.props;
 
-export type Props = { text: string }
-
-export default class ExampleComponent extends React.Component<Props> {
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
+        return (
+            <div className="device-wrapper">
+                <div className="device" data-device={ device } data-orientation={ orientation } data-color={ color }>
+                    <div className="screen" { ...screenProps }>
+                        { children }
+                    </div>
+                    <div className="button" { ...buttonProps }/>
+                </div>
+            </div>
+        );
+    }
 }
