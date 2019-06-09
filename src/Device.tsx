@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {createRef} from "react";
 
 export type Props = {
     device: string,
@@ -16,15 +15,12 @@ export type State = {
 }
 
 export default class Device extends React.Component<Props, State> {
-    private readonly wrapperRef: React.RefObject<HTMLDivElement>;
-
     constructor(props: Props) {
         super(props);
 
         this.state = {
             wrapperBottomPadding: 0
         };
-        this.wrapperRef = createRef();
     }
 
     componentDidMount(): void {
@@ -57,7 +53,7 @@ export default class Device extends React.Component<Props, State> {
         }
 
         return (
-            <div className='device-wrapper' ref={ this.wrapperRef } style={ { width: calculatedWidth } }>
+            <div className='device-wrapper' style={ { width: calculatedWidth } }>
                 <div className='device' data-device={ device } data-orientation={ orientation } data-color={ color }>
                     <div className='screen' { ...screenProps }>
                         { children }
