@@ -19,7 +19,7 @@ export default class Device extends React.Component<Props, State> {
         super(props);
 
         this.state = {
-            wrapperBottomPadding: 0
+            wrapperBottomPadding: 1
         };
     }
 
@@ -53,7 +53,7 @@ export default class Device extends React.Component<Props, State> {
         }
 
         return (
-            <div className='device-wrapper' style={ { maxWidth: calculatedWidth } }>
+            <div className='device-wrapper' style={ { maxWidth: calculatedWidth, width: calculatedWidth } }>
                 <div className='device' data-device={ device } data-orientation={ orientation } data-color={ color }>
                     <div className='screen' { ...screenProps }>
                         { children }
