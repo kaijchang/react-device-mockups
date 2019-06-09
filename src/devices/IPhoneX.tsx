@@ -13,7 +13,7 @@ export type Props = {
 export default class IPhoneX extends React.Component<Props> {
     render() {
         return (
-            <Device { ...this.props } device='iPhoneX' color='black'/>
+            <Device orientation='portrait' { ...this.props } device='iPhoneX' color='black'/>
         )
     }
 }

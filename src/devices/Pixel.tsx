@@ -13,7 +13,7 @@ export type Props = {
 export default class Pixel extends React.Component<Props> {
     render() {
         return (
-            <Device { ...this.props } device='Pixel' orientation='portrait'/>
+            <Device color='black' { ...this.props } device='Pixel' orientation='portrait'/>
         )
     }
 }

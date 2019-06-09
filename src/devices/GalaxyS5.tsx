@@ -14,7 +14,7 @@ export type Props = {
 export default class GalaxyS5 extends React.Component<Props> {
     render() {
         return (
-            <Device { ...this.props } device='galaxyS5'/>
+            <Device orientation='portrait' color='black' { ...this.props } device='galaxyS5'/>
         )
     }
 }
