@@ -7,22 +7,24 @@
 ## Install
 
 ```bash
-npm install --save react-device-mockups
+npm install --save react-device-mockups html5-device-mockups
 ```
 
 ## Usage
 
 ```tsx
-import React from 'react';
+import React, { Component } from 'react';
 
-import Device from 'react-device-mockups';
+import 'html5-device-mockups/dist/device-mockups.min.css';
 
-class Example extends React.Component {
+import { MacbookPro } from 'react-device-mockups';
+
+export default class App extends Component {
     render () {
         return (
-            <Device device='iPhone7' orientation='portrait' color='black'>
+            <MacbookPro>
                 Hello World!
-            </Device>
+            </MacbookPro>
         );
     }
 }

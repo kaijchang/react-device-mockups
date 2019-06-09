@@ -7,7 +7,7 @@ import { MacbookPro } from 'react-device-mockups';
 export default class App extends Component {
     render () {
         return (
-            <MacbookPro orientation='portrait' color='black'>
+            <MacbookPro>
                 Hello World!
             </MacbookPro>
         );
