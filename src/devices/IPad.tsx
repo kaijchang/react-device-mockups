@@ -3,6 +3,7 @@ import * as React from 'react';
 import Device from '../Device';
 
 export type Props = {
+    orientation: 'portrait' | 'landscape',
     color: 'black' | 'white',
     buttonProps: React.HTMLProps<HTMLDivElement>,
     screenProps: React.HTMLProps<HTMLDivElement>,
@@ -10,10 +11,10 @@ export type Props = {
     height?: number
 };
 
-export default class iPhone6Hand extends React.Component<Props> {
+export default class IPad extends React.Component<Props> {
     render() {
         return (
-            <Device { ...this.props } device='iPhone6Hand' orientation='portrait'/>
+            <Device { ...this.props } device='iPad'/>
         )
     }
 }

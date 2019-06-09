@@ -4,17 +4,17 @@ import Device from '../Device';
 
 export type Props = {
     orientation: 'portrait' | 'landscape',
-    color: 'black' | 'white' | 'gold' | 'pink',
+    color: 'black' | 'white',
     buttonProps: React.HTMLProps<HTMLDivElement>,
     screenProps: React.HTMLProps<HTMLDivElement>,
     width?: number,
     height?: number
 };
 
-export default class iPhoneSE extends React.Component<Props> {
+export default class IPhone5 extends React.Component<Props> {
     render() {
         return (
-            <Device { ...this.props } device='iPhoneSE'/>
+            <Device { ...this.props } device='iPhone5'/>
         )
     }
 }

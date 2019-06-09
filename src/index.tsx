@@ -5,19 +5,19 @@ import GalaxyS5 from './devices/GalaxyS5';
 import GalaxyTab4 from './devices/GalaxyTab4';
 import HTCOneM8 from './devices/HTCOneM8';
 import HuaweiP8 from './devices/HuaweiP8';
-import iMac from './devices/iMac';
-import iPad from './devices/iPad';
-import iPadAir2 from './devices/iPadAir2';
-import iPadPro from './devices/iPadPro';
-import iPhone5 from './devices/iPhone5';
-import iPhone6 from './devices/iPhone6';
-import iPhone6Hand from './devices/iPhone6Hand';
-import iPhone6Plus from './devices/iPhone6Plus';
-import iPhone7 from './devices/iPhone7';
-import iPhone7Hand from './devices/iPhone7Hand';
-import iPhone7Hand2 from './devices/iPhone7Hand2';
-import iPhoneSE from './devices/iPhoneSE';
-import iPhoneX from './devices/iPhoneX';
+import IMac from './devices/IMac';
+import IPad from './devices/IPad';
+import IPadAir2 from './devices/IPadAir2';
+import IPadPro from './devices/IPadPro';
+import IPhone5 from './devices/IPhone5';
+import IPhone6 from './devices/IPhone6';
+import IPhone6Hand from './devices/IPhone6Hand';
+import IPhone6Plus from './devices/IPhone6Plus';
+import IPhone7 from './devices/IPhone7';
+import IPhone7Hand from './devices/IPhone7Hand';
+import IPhone7Hand2 from './devices/IPhone7Hand2';
+import IPhoneSE from './devices/IPhoneSE';
+import IPhoneX from './devices/IPhoneX';
 import Lumia930 from './devices/Lumia930';
 import Macbook from './devices/Macbook';
 import Macbook2015 from './devices/Macbook2015';
@@ -37,19 +37,19 @@ export {
     GalaxyTab4,
     HTCOneM8,
     HuaweiP8,
-    iMac,
-    iPad,
-    iPadAir2,
-    iPadPro,
-    iPhone6,
-    iPhone6Plus,
-    iPhoneSE,
-    iPhone5,
-    iPhone6Hand,
-    iPhone7Hand,
-    iPhone7Hand2,
-    iPhone7,
-    iPhoneX,
+    IMac,
+    IPad,
+    IPadAir2,
+    IPadPro,
+    IPhone6,
+    IPhone6Plus,
+    IPhoneSE,
+    IPhone5,
+    IPhone6Hand,
+    IPhone7Hand,
+    IPhone7Hand2,
+    IPhone7,
+    IPhoneX,
     Lumia930,
     Macbook,
     Macbook2015,

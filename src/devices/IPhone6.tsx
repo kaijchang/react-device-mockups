@@ -11,10 +11,10 @@ export type Props = {
     height?: number
 };
 
-export default class iPhone6Plus extends React.Component<Props> {
+export default class IPhone6 extends React.Component<Props> {
     render() {
         return (
-            <Device { ...this.props } device='iPhone6Plus'/>
+            <Device { ...this.props } device='iPhone6'/>
         )
     }
 }

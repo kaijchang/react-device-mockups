@@ -9,7 +9,7 @@ export type Props = {
     height?: number
 };
 
-export default class iMac extends React.Component<Props> {
+export default class IMac extends React.Component<Props> {
     render() {
         return (
             <Device { ...this.props } device='iMac' orientation='portrait' color='black'/>
