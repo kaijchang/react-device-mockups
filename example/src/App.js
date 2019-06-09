@@ -7,7 +7,7 @@ import { MacbookPro } from 'react-device-mockups';
 export default class App extends Component {
     render () {
         return (
-            <MacbookPro>
+            <MacbookPro height={ 500 }>
                 Hello World!
             </MacbookPro>
         );
