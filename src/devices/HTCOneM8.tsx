@@ -1,13 +1,9 @@
 import * as React from 'react';
 
-import Device from '../Device';
+import Device, { Props as DeviceProps } from '../Device';
 
-export type Props = {
-    orientation: 'portrait' | 'landscape',
-    buttonProps: React.HTMLProps<HTMLDivElement>,
-    screenProps: React.HTMLProps<HTMLDivElement>,
-    width?: number,
-    height?: number
+export type Props = Omit<DeviceProps, 'color'> & {
+    orientation?: 'portrait' | 'landscape'
 };
 
 export default class HTCOneM8 extends React.Component<Props> {

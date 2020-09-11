@@ -1,14 +1,10 @@
 import * as React from 'react';
 
-import Device from '../Device';
+import Device, { Props as DeviceProps } from '../Device';
 
-export type Props = {
-    orientation: 'portrait' | 'landscape',
-    color: 'black' | 'white' | 'gold' | 'pink' | 'red',
-    buttonProps: React.HTMLProps<HTMLDivElement>,
-    screenProps: React.HTMLProps<HTMLDivElement>,
-    width?: number,
-    height?: number
+export type Props = DeviceProps & {
+    orientation?: 'portrait' | 'landscape',
+    color?: 'black' | 'white' | 'gold' | 'pink' | 'red'
 };
 
 export default class IPhone7 extends React.Component<Props> {

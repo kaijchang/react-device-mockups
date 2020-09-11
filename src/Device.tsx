@@ -2,8 +2,8 @@ import * as React from 'react';
 
 export type Props = {
     device: string,
-    orientation: 'portrait' | 'landscape',
-    color: 'black' | 'white' | 'gold' | 'red' | 'pink',
+    orientation?: 'portrait' | 'landscape',
+    color?: 'black' | 'white' | 'gold' | 'red' | 'pink',
     width?: number,
     height?: number,
     buttonProps?: React.HTMLProps<HTMLDivElement>,
