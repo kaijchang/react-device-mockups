@@ -6,8 +6,8 @@ export type Props = {
     color: 'black' | 'white' | 'gold' | 'red' | 'pink',
     width?: number,
     height?: number,
-    buttonProps: React.HTMLProps<HTMLDivElement>,
-    screenProps: React.HTMLProps<HTMLDivElement>
+    buttonProps?: React.HTMLProps<HTMLDivElement>,
+    screenProps?: React.HTMLProps<HTMLDivElement>
 };
 
 export type State = {
