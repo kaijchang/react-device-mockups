@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import Device, { Props as DeviceProps } from '../Device';
 
-export type Props = Omit<DeviceProps, 'orientation'> & {
+export type Props = Omit<Omit<DeviceProps, 'device'>, 'orientation'> & {
     color?: 'black' | 'white'
 };
 export default class IPhone6Hand extends React.Component<Props> {

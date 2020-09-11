@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import Device, { Props as DeviceProps } from '../Device';
 
-export type Props = Omit<DeviceProps, 'color'> & {
+export type Props = Omit<Omit<DeviceProps, 'device'>, 'color'> & {
     orientation?: 'portrait' | 'landscape'
 };
 
