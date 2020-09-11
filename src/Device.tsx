@@ -6,6 +6,7 @@ export type Props = {
     color?: 'black' | 'white' | 'gold' | 'red' | 'pink',
     width?: number,
     height?: number,
+    wrapperProps?: React.HTMLProps<HTMLDivElement>,
     buttonProps?: React.HTMLProps<HTMLDivElement>,
     screenProps?: React.HTMLProps<HTMLDivElement>
 };
@@ -42,7 +43,7 @@ export default class Device extends React.Component<Props, State> {
     }
 
     render() {
-        const { device, orientation, color, width, height, buttonProps, screenProps, children } = this.props;
+        const { device, orientation, color, width, height, wrapperProps, buttonProps, screenProps, children } = this.props;
 
         let calculatedWidth;
 
@@ -53,7 +54,11 @@ export default class Device extends React.Component<Props, State> {
         }
 
         return (
-            <div className='device-wrapper' style={ { maxWidth: calculatedWidth, width: calculatedWidth } }>
+            <div
+                { ...wrapperProps }
+                className='device-wrapper'
+                style={ { maxWidth: calculatedWidth, width: calculatedWidth, ...(wrapperProps && wrapperProps.style ? wrapperProps.style : {}) } }
+            >
                 <div className='device' data-device={ device } data-orientation={ orientation } data-color={ color }>
                     <div className='screen' { ...screenProps }>
                         { children }
