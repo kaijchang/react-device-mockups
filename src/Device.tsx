@@ -4,8 +4,8 @@ export type Props = {
     device: string,
     orientation?: 'portrait' | 'landscape',
     color?: 'black' | 'white' | 'gold' | 'red' | 'pink',
-    width?: number,
-    height?: number,
+    width?: number | string,
+    height?: number | string,
     wrapperProps?: React.HTMLProps<HTMLDivElement>,
     buttonProps?: React.HTMLProps<HTMLDivElement>,
     screenProps?: React.HTMLProps<HTMLDivElement>
@@ -48,9 +48,9 @@ export default class Device extends React.Component<Props, State> {
         let calculatedWidth;
 
         if (width) {
-            calculatedWidth = width;
+            calculatedWidth = typeof width == 'string' ? width : width + 'px';
         } else if (height) {
-            calculatedWidth = height / this.state.wrapperBottomPadding * 100;
+            calculatedWidth = `calc(${typeof height == 'string' ? height : height + 'px'} / ${this.state.wrapperBottomPadding} * 100)`;
         }
 
         return (
