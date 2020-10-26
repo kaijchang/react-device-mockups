@@ -22,9 +22,11 @@ export default class Device extends React.Component<Props, State> {
         this.state = {
             wrapperBottomPadding: 1
         };
+
+        this.loadPaddingFromStylesheet = this.loadPaddingFromStylesheet.bind(this);
     }
 
-    componentDidMount(): void {
+    loadPaddingFromStylesheet(): void {
         const { device, orientation, color } = this.props;
 
         for (let i = 0; i < document.styleSheets.length; i++) {
@@ -39,6 +41,14 @@ export default class Device extends React.Component<Props, State> {
                     });
                 }
             }
+        }
+    }
+
+    componentDidMount(): void {
+        if (document.readyState == 'complete') {
+            this.loadPaddingFromStylesheet();
+        } else {
+            window.addEventListener('load', this.loadPaddingFromStylesheet);
         }
     }
 
