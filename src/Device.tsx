@@ -29,18 +29,27 @@ export default class Device extends React.Component<Props, State> {
     loadPaddingFromStylesheet(): void {
         const { device, orientation, color } = this.props;
 
+        let found = false;
+
         for (let i = 0; i < document.styleSheets.length; i++) {
-            const sheet = document.styleSheets[i] as CSSStyleSheet;
-            const rules = sheet.cssRules || sheet.rules;
-            for (let i = 0; i < rules.length; i++) {
-                const rule = rules[i] as CSSStyleRule;
-                if (rule.selectorText === `.device[data-device="${ device }"][data-orientation="${ orientation }"][data-color="${ color }"]`) {
-                    const paddingRule = rule.style.paddingBottom as string;
-                    this.setState({
-                       wrapperBottomPadding: parseFloat(paddingRule.substr(0, paddingRule.length - 1))
-                    });
+            try {
+                const sheet = document.styleSheets[i] as CSSStyleSheet;
+                const rules = sheet.cssRules || sheet.rules;
+                for (let i = 0; i < rules.length; i++) {
+                    const rule = rules[i] as CSSStyleRule;
+                    if (rule.selectorText === `.device[data-device="${ device }"][data-orientation="${ orientation }"][data-color="${ color }"]`) {
+                        found = true;
+                        const paddingRule = rule.style.paddingBottom as string;
+                        this.setState({
+                           wrapperBottomPadding: parseFloat(paddingRule.substr(0, paddingRule.length - 1))
+                        });
+                    }
                 }
-            }
+            } catch (e) { }
+        }
+
+        if (!found) {
+            throw new Error('Unable to find the html5-device-mockups stylsheet.');
         }
     }
 
