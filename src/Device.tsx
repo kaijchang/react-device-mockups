@@ -58,7 +58,7 @@ export default class Device extends React.Component<Props, State> {
         let calculatedWidth;
 
         if (width) {
-            calculatedWidth = typeof width == 'string' ? width : width + 'px';
+            calculatedWidth = width;
         } else if (height) {
             calculatedWidth = `calc(${typeof height == 'string' ? height : height + 'px'} / ${this.state.wrapperBottomPadding} * 100)`;
         }
