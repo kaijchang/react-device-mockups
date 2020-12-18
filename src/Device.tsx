@@ -12,7 +12,7 @@ export type Props = {
 };
 
 export type State = {
-    wrapperBottomPadding: number
+    wrapperBottomPadding: number | null
 }
 
 export default class Device extends React.Component<Props, State> {
@@ -20,7 +20,7 @@ export default class Device extends React.Component<Props, State> {
         super(props);
 
         this.state = {
-            wrapperBottomPadding: 1
+            wrapperBottomPadding: null
         };
 
         this.loadPaddingFromStylesheet = this.loadPaddingFromStylesheet.bind(this);
@@ -49,7 +49,7 @@ export default class Device extends React.Component<Props, State> {
         }
 
         if (!found) {
-            throw new Error('Unable to find the html5-device-mockups stylsheet.');
+            throw new Error('Unable to find the html5-device-mockups stylesheet.');
         }
     }
 
@@ -62,6 +62,10 @@ export default class Device extends React.Component<Props, State> {
     }
 
     render() {
+        if (this.state.wrapperBottomPadding === null) {
+            return null;
+        }
+
         const { device, orientation, color, width, height, wrapperProps, buttonProps, screenProps, children } = this.props;
 
         let calculatedWidth;
