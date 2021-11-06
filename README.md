@@ -12,6 +12,8 @@ npm install --save react-device-mockups html5-device-mockups
 
 ## Usage
 
+To control the height of the device, see [https://github.com/pixelsign/html5-device-mockups/issues/47](https://github.com/pixelsign/html5-device-mockups/issues/47).
+
 ```tsx
 import React, { Component } from 'react';
 
@@ -22,7 +24,7 @@ import { IPad } from 'react-device-mockups';
 export default class App extends Component {
     render () {
         return (
-            <IPad height={500} orientation='landscape' color='black' buttonProps={ {
+            <IPad width={300} orientation='landscape' color='black' buttonProps={ {
                 onClick: () => alert('Home Button Clicked!')
             } }>
                 <iframe title='showcase' src='https://example.com' style={ {
