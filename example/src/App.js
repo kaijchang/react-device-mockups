@@ -7,7 +7,7 @@ import { IPad } from 'react-device-mockups';
 export default class App extends Component {
     render () {
         return (
-            <IPad height={500} buttonProps={ {
+            <IPad width={300} buttonProps={ {
                 onClick: () => alert('Home Button Clicked!')
             } }>
                 <iframe title='showcase' src='https://example.com' style={ {
